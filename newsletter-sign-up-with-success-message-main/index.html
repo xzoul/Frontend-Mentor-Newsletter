@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta property="og:title" content="Frontend Project 1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <style data-tag="reset-style-sheet">
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      html {
+        line-height: 1.15;
+      }
+      body {
+        margin: 0;
+      }
+      * {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+      }
+      p,
+      li,
+      ul,
+      pre,
+      div,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      figure,
+      blockquote,
+      figcaption {
+        margin: 0;
+        padding: 0;
+      }
+      button {
+        background-color: transparent;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      [type="button"],
+      [type="reset"],
+      [type="submit"] {
+        -webkit-appearance: button;
+      }
+      button::-moz-focus-inner,
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      button:-moz-focus,
+      [type="button"]:-moz-focus,
+      [type="reset"]:-moz-focus,
+      [type="submit"]:-moz-focus {
+        outline: 1px dotted ButtonText;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      input {
+        padding: 2px 4px;
+      }
+      img {
+        display: block;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+  </head>
+
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div id="newsletter">
+      <div class="newsletter-container">
+        <div class="newsletter-container1">
+          <div class="newsletter-banner-container">
+            <img
+              alt="image"
+              src="assets/images/illustration-sign-up-desktop.svg"
+              class="newsletter-image"
+            />
+            <img
+              alt="image"
+              src="assets/images/illustration-sign-up-mobile.svg"
+              class="newsletter-image1"
+            />
+          </div>
+          <div class="newsletter-container2">
+            <div class="newsletter-container3">
+              <h1 class="newsletter-title">Stay updated!</h1>
+              <span class="newsletter-description">
+                Join 60,000+ product managers receiving monthly updates on:
+              </span>
+            </div>
+            <div class="newsletter-list-container">
+              <div class="newsletter-container4">
+                <img
+                  alt="image"
+                  src="assets/images/icon-list.svg"
+                  class="newsletter-check-icon"
+                />
+                <span class="newsletter-text">
+                  Product discovery and building what matters
+                </span>
+              </div>
+              <div class="newsletter-container5">
+                <img
+                  alt="image"
+                  src="assets/images/icon-list.svg"
+                  class="newsletter-image2"
+                />
+                <span class="newsletter-text1">
+                  Measuring to ensure updates are a success
+                </span>
+              </div>
+              <div class="newsletter-container6">
+                <img
+                  alt="image"
+                  src="assets/images/icon-list.svg"
+                  class="newsletter-image3"
+                />
+                <span class="newsletter-text2">And much more!</span>
+              </div>
+            </div>
+            <div class="newsletter-container7">
+              <div
+                style="
+                  display: flex;
+                  align-self: stretch;
+                  align-items: flex-start;
+                  flex-direction: row;
+                  justify-content: space-between;
+                "
+              >
+                <label class="newsletter-label">Email address</label>
+                <label id="invalid" class="newsletter-label1"
+                  >Valid email required</label
+                >
+              </div>
+              <input
+                type="email"
+                required=""
+                placeholder="email@company.com"
+                class="newsletter-textinput input"
+                id="emailInput"
+                name="email"
+              />
+            </div>
+            <button
+              onclick="validateForm();"
+              type="button"
+              class="newsletter-button button"
+            >
+              Subscribe to monthly newsletter
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="subscribe" style="display: none">
+      <div class="page-container">
+        <div class="page-container1">
+          <div class="page-container2">
+            <img
+              src="assets/images/icon-success.svg"
+              alt="image"
+              class="page-image"
+            />
+            <h1 class="page-text">
+              <span>Thanks for subscribing!</span>
+              <br />
+            </h1>
+            <span class="page-text3">
+              <span>A confirmation email has been sent to</span>
+              <span class="page-text5">ash@loremcompany.com</span>
+              <span>
+                . Please open it and click the button inside to confirm your
+                subscription.
+              </span>
+            </span>
+          </div>
+          <button
+            onclick="toggleDiv()"
+            type="button"
+            class="page-button button"
+          >
+            Dismiss message
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution" style="padding: 8px">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Jimmy Dela Cruz</a>.
+    </div>
+  </body>
+</html>
+
+<script>
+  function toggleDiv() {
+    var myDiv = document.getElementById("subscribe");
+    // var subs = document.getElementById("subscribe");
+
+    // Toggle the display property
+    if (myDiv.style.display === "none") {
+      myDiv.style.display = "block";
+      document.getElementById("newsletter").style.display = "none";
+    } else {
+      myDiv.style.display = "none";
+      document.getElementById("newsletter").style.display = "block";
+    }
+  }
+
+  function validateForm() {
+    var emailInput = document.getElementById("emailInput");
+    var emailValue = emailInput.value;
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(emailValue)) {
+      emailInput.classList.remove("newsletter-textinput");
+      emailInput.classList.add("newsletter-textinput-wrong");
+      document.getElementById("invalid").style.display = "block";
+    } else {
+      emailInput.classList.add("newsletter-textinput");
+      emailInput.classList.remove("newsletter-textinput-wrong");
+
+      document.getElementById("invalid").style.display = "none";
+      document.getElementById("emailInput").value = "";
+      toggleDiv();
+    }
+  }
+</script>
